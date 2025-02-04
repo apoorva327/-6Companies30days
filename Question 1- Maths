@@ -1,0 +1,22 @@
+class Solution {
+public:
+    string convertToTitle(int colNum) {
+       
+        string result= "";
+        while(colNum > 0){
+            colNum--;
+            char ch = 'A' + (colNum%26);
+            result= ch+result;
+            colNum/=26;
+        }
+        return result;
+    }
+    int main(){
+        int colNum;
+        cout<<"Enter  Column Number.";
+        cin>> colNum;
+
+        cout<<"Excel Title"<<convertToTitle(colNum)<<endl;
+        return 0;
+    }
+};
